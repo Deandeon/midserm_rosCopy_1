@@ -1,0 +1,19 @@
+/**:
+  ros__parameters:
+    start_key: "s"
+    cell_size: 0.30
+    forward_speed: 0.10
+    turn_speed: 0.60
+    position_tolerance: 0.03
+    angle_tolerance: 0.07
+    wall_threshold: 0.40
+    clear_threshold: 0.55
+    sector_half_width_deg: 18.0
+    use_goal_cell: false
+    goal_cell_x: 0
+    goal_cell_y: 0
+    goal_x: 2.0
+    goal_y: 2.0
+    goal_tolerance: 0.20
+    min_blob_area: 1200
+    stable_detection_count: 4
