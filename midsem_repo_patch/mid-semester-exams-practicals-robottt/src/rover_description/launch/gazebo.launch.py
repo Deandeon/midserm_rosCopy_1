@@ -15,7 +15,7 @@ def generate_launch_description():
 
     description_share = FindPackageShare("rover_description")
     navigation_share = FindPackageShare("maze_navigation")
-    gazebo_share = FindPackageShare("gazebo_ros")
+    gazebo_share = FindPackageShare("ros_gz_sim")
     world_share = FindPackageShare("ashbot_world")
 
     xacro_file = PathJoinSubstitution([description_share, "urdf", "rover.urdf.xacro"])
@@ -25,7 +25,7 @@ def generate_launch_description():
 
     robot_description = {
         "robot_description": Command([
-            "xacro",
+            "xacro"," ",
             xacro_file,
             "use_sim:=true",
             "enable_lidar:=true",
@@ -54,7 +54,7 @@ def generate_launch_description():
         ),
 
         Node(
-            package="gazebo_ros",
+            package="ros_gz_sim",
             executable="spawn_entity.py",
             arguments=[
                 "-entity", "rover",
