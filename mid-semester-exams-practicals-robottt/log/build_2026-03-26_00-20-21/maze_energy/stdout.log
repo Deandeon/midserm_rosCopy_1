@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/maze_energy/maze_energy.egg-info
+writing ../../build/maze_energy/maze_energy.egg-info/PKG-INFO
+writing dependency_links to ../../build/maze_energy/maze_energy.egg-info/dependency_links.txt
+writing entry points to ../../build/maze_energy/maze_energy.egg-info/entry_points.txt
+writing requirements to ../../build/maze_energy/maze_energy.egg-info/requires.txt
+writing top-level names to ../../build/maze_energy/maze_energy.egg-info/top_level.txt
+writing manifest file '../../build/maze_energy/maze_energy.egg-info/SOURCES.txt'
+reading manifest file '../../build/maze_energy/maze_energy.egg-info/SOURCES.txt'
+writing manifest file '../../build/maze_energy/maze_energy.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build
+creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib
+creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy
+copying maze_energy/energy_node.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy
+copying maze_energy/__init__.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy
+running install
+running install_lib
+creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy
+copying /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy/energy_node.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy
+copying /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy/__init__.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy
+byte-compiling /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy/energy_node.py to energy_node.cpython-312.pyc
+byte-compiling /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/ament_index
+creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/ament_index/resource_index
+creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/ament_index/resource_index/packages
+copying resource/maze_energy -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/ament_index/resource_index/packages
+copying package.xml -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/maze_energy
+running install_egg_info
+Copying ../../build/maze_energy/maze_energy.egg-info to /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy-0.1.0-py3.12.egg-info
+running install_scripts
+Installing energy_node script to /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/maze_energy
+writing list of installed files to '/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/install.log'

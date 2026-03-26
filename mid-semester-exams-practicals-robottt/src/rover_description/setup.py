@@ -19,7 +19,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='david orhin',
+    maintainer='david',
     maintainer_email='david.orhin@ashesi.edu.gh',
     description='Robot description package (maze robott)',
     license='MIT',

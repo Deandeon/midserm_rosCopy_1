@@ -1,0 +1,37 @@
+[5.985s] Invoking command in '/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/src/maze_energy': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/maze_energy build --build-base /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build install --record /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/install.log --single-version-externally-managed install_data
+[7.913s] running egg_info
+[7.915s] creating ../../build/maze_energy/maze_energy.egg-info
+[8.040s] writing ../../build/maze_energy/maze_energy.egg-info/PKG-INFO
+[8.042s] writing dependency_links to ../../build/maze_energy/maze_energy.egg-info/dependency_links.txt
+[8.043s] writing entry points to ../../build/maze_energy/maze_energy.egg-info/entry_points.txt
+[8.048s] writing requirements to ../../build/maze_energy/maze_energy.egg-info/requires.txt
+[8.048s] writing top-level names to ../../build/maze_energy/maze_energy.egg-info/top_level.txt
+[8.049s] writing manifest file '../../build/maze_energy/maze_energy.egg-info/SOURCES.txt'
+[8.322s] reading manifest file '../../build/maze_energy/maze_energy.egg-info/SOURCES.txt'
+[8.325s] writing manifest file '../../build/maze_energy/maze_energy.egg-info/SOURCES.txt'
+[8.325s] running build
+[8.326s] running build_py
+[8.329s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build
+[8.331s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib
+[8.331s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy
+[8.331s] copying maze_energy/energy_node.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy
+[8.347s] copying maze_energy/__init__.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy
+[8.348s] running install
+[8.377s] running install_lib
+[8.506s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy
+[8.509s] copying /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy/energy_node.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy
+[8.512s] copying /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build/lib/maze_energy/__init__.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy
+[8.516s] byte-compiling /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy/energy_node.py to energy_node.cpython-312.pyc
+[8.531s] byte-compiling /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy/__init__.py to __init__.cpython-312.pyc
+[8.537s] running install_data
+[8.537s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/ament_index
+[8.538s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/ament_index/resource_index
+[8.538s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/ament_index/resource_index/packages
+[8.538s] copying resource/maze_energy -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/ament_index/resource_index/packages
+[8.542s] copying package.xml -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/share/maze_energy
+[8.543s] running install_egg_info
+[8.674s] Copying ../../build/maze_energy/maze_energy.egg-info to /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages/maze_energy-0.1.0-py3.12.egg-info
+[8.677s] running install_scripts
+[9.565s] Installing energy_node script to /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/maze_energy
+[9.569s] writing list of installed files to '/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/install.log'
+[9.795s] Invoked command in '/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/src/maze_energy' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/maze_energy/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/maze_energy build --build-base /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/build install --record /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/maze_energy/install.log --single-version-externally-managed install_data

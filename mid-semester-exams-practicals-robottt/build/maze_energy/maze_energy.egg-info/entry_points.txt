@@ -1,0 +1,2 @@
+[console_scripts]
+energy_node = maze_energy.energy_node:main

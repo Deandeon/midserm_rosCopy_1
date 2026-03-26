@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rover">
+
+  <xacro:property name="mesh_dir" value="package://rover_description/meshes"/>
+
+  <material name="body_color">
+    <color rgba="0.615686 0.811765 0.929412 1"/>
+  </material>
+
+  <!-- body -->
+  <link name="base_link"/>
+
+  <link name="main_body">
+    <inertial>
+      <origin xyz="-0.077841 0.00218182 -0.0645442" rpy="0 0 0"/>
+      <mass value="0.00344468"/>
+      <inertia ixx="8.31262e-06" ixy="1.21351e-08" ixz="-4.30308e-07"
+               iyy="2.83262e-05" iyz="7.87963e-09" izz="3.34903e-05"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="8.67362e-19 0.00232656 -0.028" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="${mesh_dir}/59.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="body_color"/>
+    </visual>
+
+    <collision>
+      <origin xyz="8.67362e-19 0.00232656 -0.028" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="${mesh_dir}/59.stl" scale="1 1 1"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_to_body" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="main_body"/>
+  </joint>
+
+  <!-- reusable wheel -->
+  <xacro:macro name="wheel" params="name xyz rpy axis inertial_xyz visual_xyz">
+    <link name="${name}">
+      <inertial>
+        <origin xyz="${inertial_xyz}" rpy="0 0 0"/>
+        <mass value="0.000126179"/>
+        <inertia ixx="1.35094e-07" ixy="0" ixz="4.8002e-11"
+                 iyy="7.41754e-08" iyz="0" izz="7.43953e-08"/>
+      </inertial>
+
+      <visual>
+        <origin xyz="${visual_xyz}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="${mesh_dir}/63.stl" scale="1 1 1"/>
+        </geometry>
+        <material name="body_color"/>
+      </visual>
+
+      <collision>
+        <origin xyz="${visual_xyz}" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="${mesh_dir}/63.stl" scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${name}_joint" type="continuous">
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+      <axis xyz="${axis}"/>
+      <parent link="main_body"/>
+      <child link="${name}"/>
+    </joint>
+
+    <gazebo reference="${name}">
+      <mu1>1.0</mu1>
+      <mu2>1.0</mu2>
+      <kp>100000.0</kp>
+      <kd>1.0</kd>
+    </gazebo>
+  </xacro:macro>
+
+  <!-- left-front: based on Planar 1 branch -->
+  <xacro:wheel
+      name="wheel_2"
+      xyz="-0.165821 -0.109219 -0.0805"
+      rpy="0.998696 0 1.5708"
+      axis="-1 0 0"
+      inertial_xyz="0.0143801 0 -0.00317342"
+      visual_xyz="0.001 0 0"/>
+
+  <!-- right-front: based on Planar 2 branch -->
+  <xacro:wheel
+      name="wheel_1"
+      xyz="-5.55112e-17 -0.109219 -0.0805"
+      rpy="-3.13848 0 1.5708"
+      axis="-1 0 0"
+      inertial_xyz="0.0143801 0 -0.00317342"
+      visual_xyz="0.001 0 0"/>
+
+  <!-- right-rear: based on Planar 3 branch -->
+  <xacro:wheel
+      name="wheel"
+      xyz="-5.55112e-17 0.113673 -0.0805"
+      rpy="0.0299318 0 -1.5708"
+      axis="1 0 0"
+      inertial_xyz="0.0133801 0 -0.00317342"
+      visual_xyz="0 0 0"/>
+
+  <!-- left-rear: based on Planar 4 branch -->
+  <xacro:wheel
+      name="wheel_3"
+      xyz="-0.165821 0.113673 -0.0805"
+      rpy="0.81533 0 -1.5708"
+      axis="1 0 0"
+      inertial_xyz="0.0133801 0 -0.00317342"
+      visual_xyz="0 0 0"/>
+
+</robot>

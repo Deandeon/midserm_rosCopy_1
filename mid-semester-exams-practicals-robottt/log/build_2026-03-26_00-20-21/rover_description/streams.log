@@ -1,0 +1,42 @@
+[6.748s] Invoking command in '/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/src/rover_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_description build --build-base /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/build install --record /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/install.log --single-version-externally-managed install_data
+[8.597s] running egg_info
+[8.598s] creating ../../build/rover_description/rover_description.egg-info
+[8.767s] writing ../../build/rover_description/rover_description.egg-info/PKG-INFO
+[8.770s] writing dependency_links to ../../build/rover_description/rover_description.egg-info/dependency_links.txt
+[8.774s] writing requirements to ../../build/rover_description/rover_description.egg-info/requires.txt
+[8.775s] writing top-level names to ../../build/rover_description/rover_description.egg-info/top_level.txt
+[8.776s] writing manifest file '../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+[9.038s] reading manifest file '../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+[9.041s] writing manifest file '../../build/rover_description/rover_description.egg-info/SOURCES.txt'
+[9.043s] running build
+[9.044s] running build_py
+[9.046s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/build
+[9.047s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/build/lib
+[9.049s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/build/lib/rover_description
+[9.052s] copying rover_description/__init__.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/build/lib/rover_description
+[9.052s] running install
+[9.083s] running install_lib
+[9.201s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/lib/python3.12/site-packages/rover_description
+[9.204s] copying /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/build/lib/rover_description/__init__.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/lib/python3.12/site-packages/rover_description
+[9.207s] byte-compiling /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/lib/python3.12/site-packages/rover_description/__init__.py to __init__.cpython-312.pyc
+[9.209s] running install_data
+[9.211s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/ament_index
+[9.213s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/ament_index/resource_index
+[9.214s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/ament_index/resource_index/packages
+[9.215s] copying resource/rover_description -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/ament_index/resource_index/packages
+[9.218s] copying package.xml -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description
+[9.219s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/launch
+[9.225s] copying launch/gazebo.launch.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/launch
+[9.230s] copying launch/display.launch.py -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/launch
+[9.235s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/urdf
+[9.235s] copying urdf/rover.urdf.xacro -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/urdf
+[9.238s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/meshes
+[9.240s] copying meshes/70.stl -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/meshes
+[9.241s] copying meshes/59.stl -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/meshes
+[9.243s] copying meshes/63.stl -> /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/meshes
+[9.246s] creating /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/share/rover_description/rviz
+[9.248s] running install_egg_info
+[9.367s] Copying ../../build/rover_description/rover_description.egg-info to /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/lib/python3.12/site-packages/rover_description-0.0.1-py3.12.egg-info
+[9.374s] running install_scripts
+[10.215s] writing list of installed files to '/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/install.log'
+[10.401s] Invoked command in '/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/src/rover_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/install/rover_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rover_description build --build-base /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/build install --record /home/david/MidsermWS/midserm_rosCopy_1/mid-semester-exams-practicals-robottt/build/rover_description/install.log --single-version-externally-managed install_data
