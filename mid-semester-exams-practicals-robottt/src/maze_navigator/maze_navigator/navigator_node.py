@@ -79,27 +79,24 @@ class MazeNavigator(Node):
 
     def read_config(self):
         config_path = os.path.join(
-            get_package_share_directory("maze_navigator"),
+            get_package_share_directory("ashbot_world"),
             "config",
-            "maze_config.yaml"
+            "maze.yaml"
         )
 
         if not os.path.exists(config_path):
             self.get_logger().error(f"Config file not found at: {config_path}")
             sys.exit(1)
 
-        # Read and parse the YAML file
         with open(config_path, "r") as f:
             config = yaml.safe_load(f)
 
-        # Extract start coordinates
-        start_x = config["start"]["x"]
-        start_y = config["start"]["y"]
-        start_yaw = config["start"]["yaw"]
+        start_x = config["start_coordinate"][0]
+        start_y = config["start_coordinate"][1]
+        start_yaw = config["start_coordinate"][2]
 
-        # Extract end coordinates
-        end_x = config["end"]["x"]
-        end_y = config["end"]["y"]
+        end_x = config["end_coordinate"][0]
+        end_y = config["end_coordinate"][1]
 
         return start_x, start_y, start_yaw, end_x, end_y
 
