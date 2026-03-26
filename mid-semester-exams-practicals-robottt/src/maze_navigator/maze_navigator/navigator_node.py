@@ -25,20 +25,20 @@ class MazeNavigator(Node):
             f"End: ({self.end_x}, {self.end_y})"
         )
 
-        # Robot state
+        # Robot statesss
         self.is_running = True       # True while the robot is navigating
         self.goal_reached = False    # True once robot reaches the end
 
-        # LIDAR readings
+        # LIDAR readingss
         self.front_distance = float("inf")  # distance from wall in front
         self.right_distance = float("inf")  # distance from wall on the right
         self.left_distance = float("inf")   # distance from wall on the left
 
-        # Movement speeds
+        # Movement speeeds
         self.forward_speed = 0.15   # linear speed when moving forward
         self.turn_speed = 0.5       # angular speed when turning
 
-        # Wall following thresholds
+        # wall following thresholds
         self.wall_distance = 0.3    # distance to maintain from the right wall
         self.too_close = 0.25       # if closer than 0.25, too close to a wall
         self.too_far = 0.45         # if farther than 0.45, too far from the wall
@@ -155,11 +155,10 @@ class MazeNavigator(Node):
             self.goal_publisher.publish(goal_msg)
 
     def navigate(self):
-        # Stop navigating if goal is reached
         if not self.is_running:
             return
 
-        cmd = Twist()  # movement command 
+        cmd = Twist()   
 
         # Right-hand wall following logic
 
@@ -186,7 +185,7 @@ class MazeNavigator(Node):
             cmd.linear.x = self.forward_speed
             cmd.angular.z = 0.0
 
-        # Send the movement command
+      
         self.cmd_publisher.publish(cmd)
 
     def stop_robot(self):

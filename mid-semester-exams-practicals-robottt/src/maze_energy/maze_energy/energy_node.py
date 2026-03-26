@@ -35,10 +35,10 @@ class EnergyNode(Node):
             "stop_moving": 0,
         }
 
-        # Track if the robot was moving in the previous command 
+        # Track if the robot was moving in the pre cmd
         self.was_moving = False
 
-        # Every time the navigator sends a movement command, its energy is tracked
+        
         self.cmd_subscription = self.create_subscription(
             Twist,
             "cmd_vel",
@@ -68,7 +68,6 @@ class EnergyNode(Node):
 
         # Check if the robot is stopped
         if linear == 0.0 and angular == 0.0:
-            # Robot stopped, charge stop cost if it was moving before
             if self.was_moving:
                 self.deduct_energy("stop_moving")
                 self.was_moving = False
@@ -79,7 +78,6 @@ class EnergyNode(Node):
             self.deduct_energy("start_moving")
             self.was_moving = True
 
-        # Check the movement happening
         if linear > 0.0 and angular == 0.0:
             # Moving straight forward
             self.deduct_energy("move_forward")
@@ -171,7 +169,6 @@ def main(args=None):
     energy_node = EnergyNode()
 
     try:
-        # Keep the node running until it is stopped
         rclpy.spin(energy_node)
     except KeyboardInterrupt:
         # If Ctrl+C is pressed, print the final report before exiting
