@@ -22,9 +22,9 @@
       <material name="body_color"/>
     </visual>
     <collision>
-      <origin xyz="8.67362e-19 0.00232656 -0.028" rpy="0 0 0"/>
+      <origin xyz="0 0 -0.028" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="${mesh_dir}/59.stl" scale="1 1 1"/>
+        <box size="0.22 0.18 0.08"/>
       </geometry>
     </collision>
   </link>
@@ -51,12 +51,12 @@
         </geometry>
         <material name="body_color"/>
       </visual>
-      <collision>
-        <origin xyz="${visual_xyz}" rpy="0 0 0"/>
+       <collision>
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
         <geometry>
-          <mesh filename="${mesh_dir}/63.stl" scale="1 1 1"/>
+          <cylinder radius="0.04" length="0.02"/>
         </geometry>
-      </collision>
+    </collision>
     </link>
     <joint name="${name}_joint" type="continuous">
       <origin xyz="${xyz}" rpy="${rpy}"/>
