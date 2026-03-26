@@ -8,7 +8,7 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     pkg_share = FindPackageShare("rover_description")
-    gazebo_share = FindPackageShare("ros_gz_sim")
+    gazebo_share = FindPackageShare("ros_gz")
     xacro_file = PathJoinSubstitution([pkg_share, "urdf", "rover.urdf.xacro"])
 
     robot_description = {
@@ -29,7 +29,7 @@ def generate_launch_description():
             output="screen"
         ),
         Node(
-            package="ros_gz_sim",
+            package="ros_gz",
             executable="spawn_entity.py",
             arguments=["-entity", "rover", "-topic", "robot_description"],
             output="screen"
