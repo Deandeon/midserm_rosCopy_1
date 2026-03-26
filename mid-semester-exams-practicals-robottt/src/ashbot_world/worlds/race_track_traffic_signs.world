@@ -1,0 +1,622 @@
+<?xml version="1.0" ?>
+<!--
+    ############################################################
+    # This file has been auto-generated on 16-02-2025 15:00:41 #
+    #   Generation ID: ca75be7f-07cc-4124-a10e-1a79f462c9df    #
+    ############################################################
+-->
+<sdf version="1.6">
+	<world name="race_track_traffic_signs">
+		<physics name="1ms" type="ignored">
+			<max_step_size>0.001</max_step_size>
+			<real_time_factor>1.0</real_time_factor>
+		</physics>
+		<plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics">
+		</plugin>
+		<plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands">
+		</plugin>
+		<plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster">
+		</plugin>
+		<plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+			<render_engine>ogre</render_engine>
+		</plugin>
+		<plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact">
+		</plugin>
+		<plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu">
+		</plugin>
+		<gravity>0 0 -9.81</gravity>
+		<magnetic_field>5.5645e-06 2.28758e-05 -4.23884e-05</magnetic_field>
+		<include>
+			<uri>model://models/sun</uri>
+		</include>
+		<include>
+			<uri>model://models/ground_plane</uri>
+		</include>
+		<include>
+			<uri>model://models/race_track</uri>
+		</include>
+		<!-- Walls -->
+		<model name="walls">
+			<static>true</static>
+			<pose relative_to="race_track">0 0 0.06 0 0 0</pose>
+			<link name="top_wall">
+				<pose>0 1.51 0 0 0 0</pose>
+				<collision name="top_wall_collision">
+					<geometry>
+						<box>
+							<size>3.04 0.02 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="top_wall_visual">
+					<geometry>
+						<box>
+							<size>3.04 0.02 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="bottom_wall">
+				<pose>0 -1.51 0 0 0 0</pose>
+				<collision name="bottom_wall_collision">
+					<geometry>
+						<box>
+							<size>3.04 0.02 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="bottom_wall_visual">
+					<geometry>
+						<box>
+							<size>3.04 0.02 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="left_wall">
+				<pose>-1.51 0 0 0 0 0</pose>
+				<collision name="left_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 3.0 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="left_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 3.0 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="right_wall">
+				<pose>1.51 0 0 0 0 0</pose>
+				<collision name="right_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 3.0 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="right_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 3.0 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+		</model>
+		<!-- OBSTACLE CHALLENGE GAME BOARD -->
+		<!-- Inner Walls -->
+		<model name="inner_walls">
+			<static>true</static>
+			<pose relative_to="race_track">0 0 0.06 0 0 0</pose>
+			<link name="top_inner_wall">
+				<pose>0 0.49 0 0 0 0</pose>
+				<collision name="top_inner_wall_collision">
+					<geometry>
+						<box>
+							<size>1.0 0.02 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="top_inner_wall_visual">
+					<geometry>
+						<box>
+							<size>1.0 0.02 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="bottom_inner_wall">
+				<pose>0 -0.49 0 0 0 0</pose>
+				<collision name="bottom_inner_wall_collision">
+					<geometry>
+						<box>
+							<size>1.0 0.02 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="bottom_inner_wall_visual">
+					<geometry>
+						<box>
+							<size>1.0 0.02 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="left_inner_wall">
+				<pose>-0.49 0 0 0 0 0</pose>
+				<collision name="left_inner_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 0.96 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="left_inner_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 0.96 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="right_inner_wall">
+				<pose>0.49 0 0 0 0 0</pose>
+				<collision name="right_inner_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 0.96 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="right_inner_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 0.96 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+		</model>
+		<!-- Parking Lot Walls -->
+		<model name="parking_lot">
+			<pose relative_to="race_track">0 0 0.06 0 0 3.141592653589793</pose>
+			<link name="parking_lot_right_wall">
+				<pose>0.51 -1.4 0 0 0 0</pose>
+				<collision name="parking_lot_right_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 0.2 0.1</size>
+						</box>
+					</geometry>
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.5</mu>
+								<mu2>0.5</mu2>
+							</ode>
+						</friction>
+					</surface>
+				</collision>
+				<visual name="parking_lot_right_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 0.2 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>1.0 0.0 1.0 1.0</ambient>
+						<diffuse>1.0 0.0 1.0 1.0</diffuse>
+					</material>
+				</visual>
+				<inertial>
+					<pose>0 0 0 0 0 0</pose>
+					<mass>0.6</mass>
+					<inertia>
+						<ixx>0.0025000000000000005</ixx>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyy>0.0005200000000000001</iyy>
+						<iyz>0</iyz>
+						<izz>0.00202</izz>
+					</inertia>
+				</inertial>
+			</link>
+			<link name="parking_lot_left_wall">
+				<pose relative_to="parking_lot_right_wall">-0.39 0 0 0 0 0</pose>
+				<collision name="parking_lot_left_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 0.2 0.1</size>
+						</box>
+					</geometry>
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.5</mu>
+								<mu2>0.5</mu2>
+							</ode>
+						</friction>
+					</surface>
+				</collision>
+				<visual name="parking_lot_left_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 0.2 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>1.0 0.0 1.0 1.0</ambient>
+						<diffuse>1.0 0.0 1.0 1.0</diffuse>
+					</material>
+				</visual>
+				<inertial>
+					<pose>0 0 0 0 0 0</pose>
+					<mass>0.6</mass>
+					<inertia>
+						<ixx>0.0025000000000000005</ixx>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyy>0.0005200000000000001</iyy>
+						<iyz>0</iyz>
+						<izz>0.00202</izz>
+					</inertia>
+				</inertial>
+			</link>
+		</model>
+		<!-- Traffic Signs -->
+		<!-- Right Straightforward Section Traffic Signs -->
+		<model name="Right_traffic_signs">
+			<pose relative_to="race_track">0 0 0.06 0 0 1.5707963267948966</pose>
+			<link name="Right_5G_traffic_sign">
+				<pose>0 -1.1 0 0 0 0</pose>
+				<collision name="Right_5G_traffic_signs_collision">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.5</mu>
+								<mu2>0.5</mu2>
+							</ode>
+						</friction>
+					</surface>
+				</collision>
+				<visual name="Right_5G_traffic_signs_visual">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.267 0.839 0.173 1.0</ambient>
+						<diffuse>0.267 0.839 0.173 1.0</diffuse>
+						<specular>0 0 0 0</specular>
+						<emissive>0 0 0 1</emissive>
+					</material>
+				</visual>
+				<inertial>
+					<pose>0 0 0 0 0 0</pose>
+					<mass>0.5</mass>
+					<inertia>
+						<ixx>0.0005208333333333334</ixx>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyy>0.0005208333333333334</iyy>
+						<iyz>0</iyz>
+						<izz>0.00020833333333333337</izz>
+					</inertia>
+				</inertial>
+			</link>
+		</model>
+		<!-- Bottom Straightforward Section Traffic Signs -->
+		<model name="Bottom_traffic_signs">
+			<pose relative_to="race_track">0 0 0.06 0 0 0</pose>
+			<link name="Bottom_1R_traffic_sign">
+				<pose>-0.5 -0.9 0 0 0 0</pose>
+				<collision name="Bottom_1R_traffic_signs_collision">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.5</mu>
+								<mu2>0.5</mu2>
+							</ode>
+						</friction>
+					</surface>
+				</collision>
+				<visual name="Bottom_1R_traffic_signs_visual">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.933 0.153 0.216 1.0</ambient>
+						<diffuse>0.933 0.153 0.216 1.0</diffuse>
+						<specular>0 0 0 0</specular>
+						<emissive>0 0 0 1</emissive>
+					</material>
+				</visual>
+				<inertial>
+					<pose>0 0 0 0 0 0</pose>
+					<mass>0.5</mass>
+					<inertia>
+						<ixx>0.0005208333333333334</ixx>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyy>0.0005208333333333334</iyy>
+						<iyz>0</iyz>
+						<izz>0.00020833333333333337</izz>
+					</inertia>
+				</inertial>
+			</link>
+			<link name="Bottom_3G_traffic_sign">
+				<pose>0.5 -0.9 0 0 0 0</pose>
+				<collision name="Bottom_3G_traffic_signs_collision">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.5</mu>
+								<mu2>0.5</mu2>
+							</ode>
+						</friction>
+					</surface>
+				</collision>
+				<visual name="Bottom_3G_traffic_signs_visual">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.267 0.839 0.173 1.0</ambient>
+						<diffuse>0.267 0.839 0.173 1.0</diffuse>
+						<specular>0 0 0 0</specular>
+						<emissive>0 0 0 1</emissive>
+					</material>
+				</visual>
+				<inertial>
+					<pose>0 0 0 0 0 0</pose>
+					<mass>0.5</mass>
+					<inertia>
+						<ixx>0.0005208333333333334</ixx>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyy>0.0005208333333333334</iyy>
+						<iyz>0</iyz>
+						<izz>0.00020833333333333337</izz>
+					</inertia>
+				</inertial>
+			</link>
+		</model>
+		<!-- Left Straightforward Section Traffic Signs -->
+		<model name="Left_traffic_signs">
+			<pose relative_to="race_track">0 0 0.06 0 0 -1.5707963267948966</pose>
+			<link name="Left_1G_traffic_sign">
+				<pose>-0.5 -0.9 0 0 0 0</pose>
+				<collision name="Left_1G_traffic_signs_collision">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.5</mu>
+								<mu2>0.5</mu2>
+							</ode>
+						</friction>
+					</surface>
+				</collision>
+				<visual name="Left_1G_traffic_signs_visual">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.267 0.839 0.173 1.0</ambient>
+						<diffuse>0.267 0.839 0.173 1.0</diffuse>
+						<specular>0 0 0 0</specular>
+						<emissive>0 0 0 1</emissive>
+					</material>
+				</visual>
+				<inertial>
+					<pose>0 0 0 0 0 0</pose>
+					<mass>0.5</mass>
+					<inertia>
+						<ixx>0.0005208333333333334</ixx>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyy>0.0005208333333333334</iyy>
+						<iyz>0</iyz>
+						<izz>0.00020833333333333337</izz>
+					</inertia>
+				</inertial>
+			</link>
+			<link name="Left_3G_traffic_sign">
+				<pose>0.5 -0.9 0 0 0 0</pose>
+				<collision name="Left_3G_traffic_signs_collision">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.5</mu>
+								<mu2>0.5</mu2>
+							</ode>
+						</friction>
+					</surface>
+				</collision>
+				<visual name="Left_3G_traffic_signs_visual">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.267 0.839 0.173 1.0</ambient>
+						<diffuse>0.267 0.839 0.173 1.0</diffuse>
+						<specular>0 0 0 0</specular>
+						<emissive>0 0 0 1</emissive>
+					</material>
+				</visual>
+				<inertial>
+					<pose>0 0 0 0 0 0</pose>
+					<mass>0.5</mass>
+					<inertia>
+						<ixx>0.0005208333333333334</ixx>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyy>0.0005208333333333334</iyy>
+						<iyz>0</iyz>
+						<izz>0.00020833333333333337</izz>
+					</inertia>
+				</inertial>
+			</link>
+		</model>
+		<!-- Top Straightforward Section Traffic Signs -->
+		<model name="Top_traffic_signs">
+			<pose relative_to="race_track">0 0 0.06 0 0 3.141592653589793</pose>
+			<link name="Top_1R_traffic_sign">
+				<pose>-0.5 -0.9 0 0 0 0</pose>
+				<collision name="Top_1R_traffic_signs_collision">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.5</mu>
+								<mu2>0.5</mu2>
+							</ode>
+						</friction>
+					</surface>
+				</collision>
+				<visual name="Top_1R_traffic_signs_visual">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.933 0.153 0.216 1.0</ambient>
+						<diffuse>0.933 0.153 0.216 1.0</diffuse>
+						<specular>0 0 0 0</specular>
+						<emissive>0 0 0 1</emissive>
+					</material>
+				</visual>
+				<inertial>
+					<pose>0 0 0 0 0 0</pose>
+					<mass>0.5</mass>
+					<inertia>
+						<ixx>0.0005208333333333334</ixx>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyy>0.0005208333333333334</iyy>
+						<iyz>0</iyz>
+						<izz>0.00020833333333333337</izz>
+					</inertia>
+				</inertial>
+			</link>
+			<link name="Top_3R_traffic_sign">
+				<pose>0.5 -0.9 0 0 0 0</pose>
+				<collision name="Top_3R_traffic_signs_collision">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<surface>
+						<friction>
+							<ode>
+								<mu>0.5</mu>
+								<mu2>0.5</mu2>
+							</ode>
+						</friction>
+					</surface>
+				</collision>
+				<visual name="Top_3R_traffic_signs_visual">
+					<geometry>
+						<box>
+							<size>0.05 0.05 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.933 0.153 0.216 1.0</ambient>
+						<diffuse>0.933 0.153 0.216 1.0</diffuse>
+						<specular>0 0 0 0</specular>
+						<emissive>0 0 0 1</emissive>
+					</material>
+				</visual>
+				<inertial>
+					<pose>0 0 0 0 0 0</pose>
+					<mass>0.5</mass>
+					<inertia>
+						<ixx>0.0005208333333333334</ixx>
+						<ixy>0</ixy>
+						<ixz>0</ixz>
+						<iyy>0.0005208333333333334</iyy>
+						<iyz>0</iyz>
+						<izz>0.00020833333333333337</izz>
+					</inertia>
+				</inertial>
+			</link>
+		</model>
+	</world>
+</sdf>

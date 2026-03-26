@@ -1,0 +1,70 @@
+{#
+ # File: maze.world.jinja
+ # Project: AshBot World
+ # File Created: Sunday, 16th February 2025 6:25:46 PM
+ # Author: nknab
+ # Email: kojo.anyinam-boateng@alumni.ashesi.edu.gh
+ # Version: 1.0
+ # Brief: World template for a maze
+ # -----
+ # Last Modified: Monday, 9th March 2026 4:01:25 PM
+ # Modified By: nknab
+ # -----
+ # Copyright ©2025 nknab
+ #}
+
+{% import 'macros/macros.jinja' as macros %}
+<!--
+{{ macros.generate_comment_box(world_name, generation_date, generation_id) }}
+-->
+
+{# VARIABLES #}
+{% set box_height = box_height | default(0.4) %}
+{% set cell_size = cell_size | default(0.5) %}
+
+{% set gem_height = box_height * 0.75 %}
+{% set gem_size = (cell_size * 0.067) / 2 %}
+
+
+{# WORLD #}
+<sdf version="1.6">
+
+	<world name="{{ world_name }}">
+
+        {% include 'macros/common.jinja' %}
+
+		<model name="walls">
+			{% set colour = "Black" %}
+
+			<static>true</static>
+			{% for position in walls %}
+				{% set name = "wall_" ~ loop.index %}
+				{% set pose = [position[0] * cell_size, position[1] * cell_size, box_height / 2, 0, 0, 0] | join(' ') %}
+				{% set size = [cell_size, cell_size, box_height] %}
+
+				{{ macros.create_box(name, colour, pose, size) }}
+			{% endfor %}
+		</model>
+		{% if gems %}
+			<model name="gems">
+
+				{% for gem in gems %}
+					{% set colour = gem.colour %}
+					{% set name = gem.colour + "_gem_" ~ loop.index %}
+					{% set pose = [
+						(gem.position[0] * cell_size) + (gem_size / 2),
+						(gem.position[1] * cell_size) + (gem_size / 2),
+						gem_height / 2,
+						0, 0, 0
+					] | join(' ') %}
+					{% set size = [gem_size, gem_size, gem_height] %}
+
+
+					{{ macros.create_box(name, colour, pose, size, 0.6, true, true) }}
+				{% endfor %}
+
+			</model>
+		{% endif %}
+
+    </world>
+</sdf>

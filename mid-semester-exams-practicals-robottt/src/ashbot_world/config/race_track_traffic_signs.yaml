@@ -1,0 +1,21 @@
+#
+# File: race_track_traffic_signs.yaml
+# Project: AshBot World
+# File Created: Sunday, 16th February 2025 3:07:50 PM
+# Author: nknab
+# Email: kojo.anyinam-boateng@alumni.ashesi.edu.gh
+# Version: 1.0
+# Brief: Configuration file for the race track with traffic signs.
+# -----
+# Last Modified: Sunday, 16th February 2025 4:10:02 PM
+# Modified By: nknab
+# -----
+# Copyright ©2025 nknab
+#
+
+generation_date: 16-02-2025 15:00:41
+generation_id: ca75be7f-07cc-4124-a10e-1a79f462c9df
+start_coordinate:
+  - 0.25                  # x
+  - -1.25                 # y
+  - 1.5707963267948966    # Yaw

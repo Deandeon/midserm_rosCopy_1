@@ -1,0 +1,218 @@
+<?xml version="1.0" ?>
+<!--
+    ############################################################
+    # This file has been auto-generated on 16-02-2025 15:31:05 #
+    #   Generation ID: 113ab096-bac1-4b5a-80da-f3b78e42ee7f    #
+    ############################################################
+-->
+<sdf version="1.6">
+	<world name="race_track">
+		<physics name="1ms" type="ignored">
+			<max_step_size>0.001</max_step_size>
+			<real_time_factor>1.0</real_time_factor>
+		</physics>
+		<plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics">
+		</plugin>
+		<plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands">
+		</plugin>
+		<plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster">
+		</plugin>
+		<plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+			<render_engine>ogre</render_engine>
+		</plugin>
+		<plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact">
+		</plugin>
+		<plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu">
+		</plugin>
+		<gravity>0 0 -9.81</gravity>
+		<magnetic_field>5.5645e-06 2.28758e-05 -4.23884e-05</magnetic_field>
+		<include>
+			<uri>model://models/sun</uri>
+		</include>
+		<include>
+			<uri>model://models/ground_plane</uri>
+		</include>
+		<include>
+			<uri>model://models/race_track</uri>
+		</include>
+		<!-- Walls -->
+		<model name="walls">
+			<static>true</static>
+			<pose relative_to="race_track">0 0 0.06 0 0 0</pose>
+			<link name="top_wall">
+				<pose>0 1.51 0 0 0 0</pose>
+				<collision name="top_wall_collision">
+					<geometry>
+						<box>
+							<size>3.04 0.02 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="top_wall_visual">
+					<geometry>
+						<box>
+							<size>3.04 0.02 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="bottom_wall">
+				<pose>0 -1.51 0 0 0 0</pose>
+				<collision name="bottom_wall_collision">
+					<geometry>
+						<box>
+							<size>3.04 0.02 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="bottom_wall_visual">
+					<geometry>
+						<box>
+							<size>3.04 0.02 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="left_wall">
+				<pose>-1.51 0 0 0 0 0</pose>
+				<collision name="left_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 3.0 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="left_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 3.0 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="right_wall">
+				<pose>1.51 0 0 0 0 0</pose>
+				<collision name="right_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 3.0 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="right_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 3.0 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+		</model>
+		<!-- OPEN CHALLENGE GAME BOARD -->
+		<!-- Inner Walls -->
+		<model name="inner_walls">
+			<static>true</static>
+			<pose relative_to="race_track">0 0 0.06 0 0 0</pose>
+			<link name="top_inner_wall">
+				<pose>-0.2 0.87 0 0 0 0</pose>
+				<collision name="top_inner_wall_collision">
+					<geometry>
+						<box>
+							<size>1.4 0.02 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="top_inner_wall_visual">
+					<geometry>
+						<box>
+							<size>1.4 0.02 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="bottom_inner_wall">
+				<pose>-0.2 -0.49 0 0 0 0</pose>
+				<collision name="bottom_inner_wall_collision">
+					<geometry>
+						<box>
+							<size>1.4 0.02 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="bottom_inner_wall_visual">
+					<geometry>
+						<box>
+							<size>1.4 0.02 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="left_inner_wall">
+				<pose>-0.89 0.19 0 0 0 0</pose>
+				<collision name="left_inner_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 1.34 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="left_inner_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 1.34 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+			<link name="right_inner_wall">
+				<pose>0.49 0.19 0 0 0 0</pose>
+				<collision name="right_inner_wall_collision">
+					<geometry>
+						<box>
+							<size>0.02 1.34 0.1</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="right_inner_wall_visual">
+					<geometry>
+						<box>
+							<size>0.02 1.34 0.1</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0 0 0 1</ambient>
+						<diffuse>0 0 0 1</diffuse>
+					</material>
+				</visual>
+			</link>
+		</model>
+	</world>
+</sdf>

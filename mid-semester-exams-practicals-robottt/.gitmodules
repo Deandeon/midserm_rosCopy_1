@@ -1,0 +1,4 @@
+[submodule "src/ashbot_world"]
+	path = src/ashbot_world
+	url = https://github.com/Ashesi-Robotics/ashbot_world.git
+	branch = eclipse

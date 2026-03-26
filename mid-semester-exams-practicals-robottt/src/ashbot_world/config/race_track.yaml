@@ -1,0 +1,21 @@
+#
+# File: race_track.yaml
+# Project: AshBot World
+# File Created: Sunday, 16th February 2025 3:33:18 PM
+# Author: nknab
+# Email: kojo.anyinam-boateng@alumni.ashesi.edu.gh
+# Version: 1.0
+# Brief: Configuration file for the race track world.
+# -----
+# Last Modified: Sunday, 16th February 2025 4:07:31 PM
+# Modified By: nknab
+# -----
+# Copyright ©2025 nknab
+#
+
+generation_date: 16-02-2025 15:31:05
+generation_id: 113ab096-bac1-4b5a-80da-f3b78e42ee7f
+start_coordinate:
+  - -0.25   # x
+  - 1.3     # y
+  - 0.0     # Yaw

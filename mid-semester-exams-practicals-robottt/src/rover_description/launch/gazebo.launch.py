@@ -9,7 +9,6 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
     pkg_share = FindPackageShare("rover_description")
     gazebo_share = FindPackageShare("ros_gz")
-    xacro_file = PathJoinSubstitution([pkg_share, "urdf", "rover.urdf.xacro"])
 
     robot_description = {
         "robot_description": Command(["xacro", 

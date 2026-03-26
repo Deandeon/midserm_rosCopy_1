@@ -10,8 +10,7 @@ def generate_launch_description():
     rviz_config = PathJoinSubstitution([pkg_share, "rviz", "rover.rviz"])
 
     robot_description = {
-        "robot_description": Command(["xacro", 
-        " ",xacro_file])
+        "robot_description": Command(["xacro"," ", xacro_file])
     }
 
     return LaunchDescription([
